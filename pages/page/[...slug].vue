@@ -10,17 +10,17 @@
             <path fill="currentColor" d="m6.921 12.5l5.793 5.792L12 19l-7-7l7-7l.714.708L6.92 11.5H19v1z"></path>
           </svg>
         </span>  
-        <span class="text-xs">My world</span>
+        <span class="text-xs tinos-regular">My world</span>
       </NuxtLink>
     </div>
 
     <ContentSlot >
-      <h1 class="text-4xl font-bold">{{ post.title }}</h1>
-      <p class="text-xl opacity-80" >{{ post.description }}</p>
+      <h1 class="text-6xl font-bold road-rage-regular">{{ post.title }}</h1>
+      <p class="text-2xl tinos-bold text-neutral-300" >{{ post.description }}</p>
     </ContentSlot>  
 
     <ContentDoc v-slot="{ doc }">
-      <article>
+      <article class=" text-xl tinos-regular">
         <ContentRenderer :value="doc" />
       </article>
     </ContentDoc>
@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="text-xs leading-3">
+    <div class="text-xs leading-3 tinos-regular">
       <hr> 
       <p v-if="post.date" class="text-xs opacity-50 hover:opacity-100">last updated on: {{ formatDate(post.date) }}
             <span v-if="post.author" class="text-xs">authored by: {{ post.author }} </span>

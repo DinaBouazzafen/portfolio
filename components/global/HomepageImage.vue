@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-const settings = ref(null);  // Initialize as null for loading state
-const isLoading = ref(true);  // Loading state to show the content only after data is loaded
-const hasError = ref(false);  // Error state to show an error message if data loading fails
-// Fetch JSON data using native fetch API
+import GlbViewer from '~/components/GlbViewer.vue';
+const settings = ref(null);
+const isLoading = ref(true);
+const hasError = ref(false);
+
 onMounted(async () => {
   try {
     const response = await fetch('../_data/homepage.json');
@@ -12,9 +13,9 @@ onMounted(async () => {
     }
     const jsonData = await response.json();
     settings.value = jsonData;
-    isLoading.value = false;  // Stop loading when data is fetched
+    isLoading.value = false;
   } catch (error) {
-    hasError.value = true;  // If there's an error, show the error message
+    hasError.value = true;
     console.error('Error loading settings:', error);
   }
 });
@@ -42,7 +43,9 @@ onMounted(async () => {
           <div class="container opacity-80 animate-fade animate-once animate-delay-[100ms] p-10 lg:p-20">
             <div class="road-rage-regular text-8xl font-bold">{{ settings.homepage_title }}</div>
             <div class="text-sm opacity-80">{{ settings.body }}</div>
-
+            <div style="width: 30%; height: 30%;">
+              <GlbViewer />
+            </div>
             <div class="flex mt-10">
                 <NuxtLink to="https://github.com/bureaupixel/" target="_blank">
                     <div class="flex-col hidden">
