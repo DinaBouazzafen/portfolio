@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import GlbViewer from '~/components/GlbViewer.vue';
+import ThreeJSViewer from '~/components/ThreeJSViewer.vue';
 const settings = ref(null);
 const isLoading = ref(true);
 const hasError = ref(false);
@@ -38,14 +39,17 @@ onMounted(async () => {
       <Drawer />
     </div>
       <!-- Info section that triggers the hover effect -->
-      <div class="info flex flex-col items-center justify-center h-screen">
+      <div class="info flex flex-col items-center justify-start h-screen">
         <div class="container text-left p-1 lg:p-20">
           <div class="container opacity-80 animate-fade animate-once animate-delay-[100ms] p-10 lg:p-20">
-            <div class="road-rage-regular text-8xl font-bold">{{ settings.homepage_title }}</div>
+            <div class="road-rage-regular text-8xl font-bold mt-[50px]">{{ settings.homepage_title }}</div>
             <div class="text-sm opacity-80">{{ settings.body }}</div>
-            <div style="width: 30%; height: 30%;">
-              <GlbViewer />
+            <div class="mt-[-300px]">
+              <!-- <GlbViewer /> -->
+              <ThreeJSViewer />
             </div>
+            
+
             <div class="flex mt-10">
                 <NuxtLink to="https://github.com/bureaupixel/" target="_blank">
                     <div class="flex-col hidden">

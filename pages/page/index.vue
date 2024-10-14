@@ -27,7 +27,7 @@
           <div class="masonry-item-text p-4">
             <h2 class="text-3xl font-semibold mb-2 road-rage-regular">{{ post.title }}</h2>
             <!-- Limiting the height of the description and making it responsive -->
-            <p v-if="post.description" class="text-gray-600 line-clamp-3 tinos-regular">{{ post.description }}</p>
+            <p v-if="post.description" class="text-gray-300 line-clamp-3 text-xl grenze">{{ post.description }}</p>
             <ClientOnly >
               <article v-if="post.tags" class="text-xs mt-2">
                 <li v-for="(item, index) in post.tags" :key="index" class="inline mr-2">

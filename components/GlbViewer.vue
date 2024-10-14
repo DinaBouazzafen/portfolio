@@ -4,8 +4,8 @@ import { TresCanvas } from '@tresjs/core'
 </script>
 
 <template>
-  <TresCanvas alpha clear-color="transparent" window-size style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"> <!-- Adjusted canvas properties -->
-    <OrbitControls />
+  <TresCanvas alpha clear-color="transparent" window-size :styles="{ pointerEvents: 'auto' }">
+        <OrbitControls />
     <TresPerspectiveCamera :position="[0, 0, 5]" />
 
     <!-- Your 3D Model -->
@@ -21,6 +21,8 @@ import { TresCanvas } from '@tresjs/core'
     <TresDirectionalLight :position="[0, -1, 0]" :intensity="2" />
   </TresCanvas>
 </template>
+
+
 
 
 
