@@ -42,9 +42,21 @@ onMounted(async () => {
       <div class="info flex flex-col items-center justify-start h-screen">
         <div class="container text-left p-1 lg:p-20">
           <div class="container opacity-80 animate-fade animate-once animate-delay-[100ms] p-10 lg:p-20">
-            <div class="road-rage-regular text-8xl font-bold mt-[50px]">{{ settings.homepage_title }}</div>
-            <div class="text-sm opacity-80">{{ settings.body }}</div>
-            <div class="mt-[-300px]">
+            <div class="road-rage-regular text-8xl font-bold mt-[-100px] mb-45">{{ settings.homepage_title }}</div>
+            <div class="flex flex-row items-start mt-[-300px]">
+              <div class="mr-[-300px] mt-[400px]" style="z-index: 1">
+                <iframe 
+                  title="Buckhain 2023" 
+                  src="https://player.vimeo.com/video/911852579?h=313c7c86e6&autoplay=1&loop=1&muted=1" 
+                  width="540" 
+                  height="260" 
+                  rameborder="0" 
+                  allow="autoplay; fullscreen" 
+                  allowfullscreen>              
+                </iframe>
+              </div>
+            </div>
+            <div class="mt-[-500px]">
               <!-- <GlbViewer /> -->
               <ThreeJSViewer />
             </div>

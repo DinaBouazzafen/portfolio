@@ -1,9 +1,9 @@
 <template>
     <div class="opacity-80 animate-fade animate-once animate-delay-[100ms] road-rage-regular">
       <div
-      class="text-5xl font-bold road-rage-regular">
+      class="text-5xl font-bold roboto-black">
       {{ settings.site_title }}</div>
-      <div class="text-4xl text-red-700 grenze">
+      <div class="text-2xl text-red-700 grenze">
       {{ settings.site_subtitle }}
       </div>
     </div>
