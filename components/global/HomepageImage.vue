@@ -44,7 +44,7 @@ onMounted(async () => {
           <div class="container opacity-80 animate-fade animate-once animate-delay-[100ms] p-10 lg:p-20">
             <div class="road-rage-regular text-8xl font-bold mt-[-100px] mb-45">{{ settings.homepage_title }}</div>
             <div class="flex flex-row items-start mt-[-300px]">
-              <div class="mr-[-300px] mt-[400px]" style="z-index: 1">
+              <div class="mr-[-300px] mt-[400px]" style="z-index: 1; position: fixed">
                 <iframe 
                   title="Buckhain 2023" 
                   src="https://player.vimeo.com/video/911852579?h=313c7c86e6&autoplay=1&loop=1&muted=1" 
@@ -56,7 +56,7 @@ onMounted(async () => {
                 </iframe>
               </div>
             </div>
-            <div class="mt-[-500px]">
+            <div class="mt-[250px]" style="position: fixed">
               <!-- <GlbViewer /> -->
               <ThreeJSViewer />
             </div>

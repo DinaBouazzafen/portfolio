@@ -53,7 +53,7 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = true; // Allow zoom if desired
     controls.enablePan = true; // Allow panning if desired
-    controls.target.set(0, -0.5, 3); // Set the target point to the model's position
+    controls.target.set(0, -1, 3); // Set the target point to the model's position
     controls.update(); // Update controls to take effect
     
     // Handle window resizing

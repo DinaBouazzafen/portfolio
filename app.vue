@@ -8,7 +8,7 @@
 
 <script setup>
 useHead({
-  title: 'Buckhain',
+  title: "Buckhain's portfolio",
   meta: [
     { name: 'description', content: 'Portfolio' }
   ],
